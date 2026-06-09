@@ -1,0 +1,12 @@
+target/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+.classpath
+.project
+.settings/
+HELP.md
+
+# never commit secrets, even local ones
+application-local.properties
