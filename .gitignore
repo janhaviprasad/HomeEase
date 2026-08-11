@@ -1,0 +1,138 @@
+# =========================================
+# HomeEase root .gitignore
+# Covers: auth-service (Spring Boot Java)
+#         booking-service (Node/Express)
+#         homeease-admin (React/Vite)
+#         mobile-app (React Native/Expo)
+# =========================================
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Editors / IDEs ----------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# ---------- Environment / secrets ----------
+# NEVER commit these
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+.env.test
+.env.test.local
+*.pem
+*.key
+
+# ---------- Logs ----------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# =========================================
+# Java / Spring Boot (auth-service)
+# =========================================
+auth-service/target/
+auth-service/build/
+auth-service/.mvn/wrapper/maven-wrapper.jar
+auth-service/out/
+auth-service/*.class
+auth-service/hs_err_pid*
+auth-service/replay_pid*
+# Spring Boot devtools
+auth-service/.spring-boot-devtools.properties
+# HELP.md is fine to keep, but backup files aren't
+auth-service/*.bak
+
+# =========================================
+# Node.js (booking-service, homeease-admin, mobile-app)
+# =========================================
+node_modules/
+booking-service/node_modules/
+homeease-admin/node_modules/
+mobile-app/node_modules/
+
+# npm / yarn / pnpm
+.npm/
+.yarn/
+.yarn-integrity
+.pnp.*
+package-lock.json.bak
+
+# =========================================
+# React / Vite build outputs (homeease-admin)
+# =========================================
+homeease-admin/dist/
+homeease-admin/build/
+homeease-admin/.vite/
+homeease-admin/*.local
+
+# =========================================
+# React Native / Expo (mobile-app)
+# =========================================
+mobile-app/.expo/
+mobile-app/.expo-shared/
+mobile-app/dist/
+mobile-app/web-build/
+mobile-app/android/app/build/
+mobile-app/android/build/
+mobile-app/android/.gradle/
+mobile-app/android/local.properties
+mobile-app/ios/build/
+mobile-app/ios/Pods/
+mobile-app/ios/Podfile.lock
+mobile-app/*.jks
+mobile-app/*.p8
+mobile-app/*.p12
+mobile-app/*.mobileprovision
+mobile-app/*.orig.*
+# EAS build artifacts
+mobile-app/.eas/
+
+# =========================================
+# Test / coverage
+# =========================================
+coverage/
+*.lcov
+.nyc_output/
+.jest-cache/
+
+# =========================================
+# TypeScript
+# =========================================
+*.tsbuildinfo
+
+# =========================================
+# Other
+# =========================================
+# scratchpad from CC test verification
+scratchpad/
+# temp files
+*.tmp
+tmp/
+# =========================================
+# Java / Spring Boot (auth-service) — additions
+# =========================================
+# Secret-bearing property files (if you use profile-specific split)
+auth-service/src/main/resources/application-local.properties
+auth-service/src/main/resources/application-secrets.properties
+auth-service/src/main/resources/application-prod.properties
